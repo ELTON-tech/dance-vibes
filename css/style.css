@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fffdf5;
+    color: #333;
+}
+
+header,
+footer {
+    background: #ff6600;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.hero,
+.gallery,
+.tutorials,
+.sponsors {
+    padding: 2rem;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 2rem auto;
+    gap: 1rem;
+}
+
+input,
+textarea,
+select {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+img,
+video {
+    margin: 1rem auto;
+    display: block;
+    max-width: 100%;
+}
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff6600;
+    color: white;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.main-nav {
+    flex: 1;
+    text-align: center;
+}
+
+.main-nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background: white;
+    color: #ff6600;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+/* Animation classes */
+.fade-slide {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+.fade-slide.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-text h2,
+.hero-text p {
+    animation: fadeInUp 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+.hero-text h2 {
+    animation-delay: 0.3s;
+}
+
+.hero-text p {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+nav a i,
+.btn i {
+    margin-right: 5px;
+}
