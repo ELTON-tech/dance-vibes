@@ -8,11 +8,19 @@ body {
 
 header,
 footer {
-    background: #ff6600;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
+
+        background: #222;
+        color: #eee;
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.9rem;
+    }
+
+    .footer a {
+        color: #ff9900;
+        text-decoration: none;
+    }
+
 
 .hero,
 .gallery,
@@ -135,7 +143,7 @@ video {
 .hero-text p {
     font-size: 1.2rem;
 }
-/* Animation classes */
+
 .fade-slide {
     opacity: 0;
     transform: translateY(50px);
@@ -175,4 +183,95 @@ video {
 nav a i,
 .btn i {
     margin-right: 5px;
+}
+
+.features {
+    padding: 3rem 2rem;
+    background: #fffdf7;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.feature-card {
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    width: 260px;
+    height: 220px;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.feature-card {
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    width: 260px;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
+    transition: background 0.3s ease;
+}
+
+.feature-card:hover::before {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.feature-content {
+    position: relative;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.feature-card:hover .feature-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #ff6600;
+    color: white;
+}
+
+.cta .btn {
+    margin: 0 10px;
+    margin-top: 1rem;
 }
