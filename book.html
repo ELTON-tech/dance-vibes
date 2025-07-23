@@ -1,45 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Book Afro Dance Vibes</title>
+    <meta charset="UTF-8" />
+    <title>Book Us – Afro Dance Vibes</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
-<header class="site-header">
-    <div class="logo">
-        <img src="assets/logo.png" alt="Afro Dance Vibes Logo" />
-    </div>
 
-<nav class="main-nav">
-    <a href="index.html"><i class="fas fa-home"></i> Home</a>
-    <a href="gallery.html"><i class="fas fa-image"></i> Gallery</a>
-    <a href="tutorials.html"><i class="fas fa-video"></i> Tutorials</a>
-    <a href="sponsors.html"><i class="fas fa-handshake"></i> Sponsors</a>
-</nav>
+    <header class="site-header">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Afro Dance Vibes Logo" />
+        </div>
+    
+        <nav class="main-nav">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="gallery.html"><i class="fas fa-image"></i> Gallery</a>
+            <a href="tutorials.html"><i class="fas fa-video"></i> Tutorials</a>
+            <a href="sponsors.html"><i class="fas fa-handshake"></i> Sponsors</a>
+        </nav>
+    
+    
+        <div class="header-buttons">
+            <a href="book.html" class="btn"><i class="fas fa-calendar-check"></i> Book</a>
+            <a href="join.html" class="btn btn-outline"><i class="fas fa-user-plus"></i> Register</a>
+        </div>
+    
+    </header>
+    <section class="booking-wrapper">
+        <!-- LEFT: Hero Text/Background -->
+        <div class="booking-hero-side">
+        </div>
+    
+        <!-- RIGHT: Booking Form -->
+        <div class="booking-form-side fade-slide">
+            <form class="booking-form">
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Your Name</label>
+                    <input type="text" placeholder="Enter your full name" required />
+                </div>
+    
+                <div class="form-group">
+                    <label><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" placeholder="you@example.com" required />
+                </div>
+    
+                <div class="form-group">
+                    <label><i class="fas fa-phone-alt"></i> Phone</label>
+                    <input type="tel" placeholder="020 000 0000" />
+                </div>
+    
+                <div class="form-group">
+                    <label><i class="fas fa-map-marker-alt"></i> Event Location</label>
+                    <input type="text" placeholder="e.g., Accra Conference Center" />
+                </div>
+    
+                <div class="form-group">
+                    <label><i class="fas fa-calendar-alt"></i> Event Date</label>
+                    <input type="date" />
+                </div>
+    
+                <div class="form-group">
+                    <label><i class="fas fa-pen-alt"></i> Message / Details</label>
+                    <textarea rows="3" placeholder="Tell us about your event..."></textarea>
+                </div>
+    
+                <button type="submit" class="btn book-btn"><i class="fas fa-paper-plane"></i> Send Booking</button>
+            </form>
+        </div>
+    </section>
 
 
-    <div class="header-buttons">
-        <a href="book.html" class="btn"><i class="fas fa-calendar-check"></i> Book</a>
-        <a href="join.html" class="btn btn-outline"><i class="fas fa-user-plus"></i> Register</a>
-    </div>
-
-</header>
-
-
-    <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <input type="text" placeholder="Event Location" />
-        <input type="date" />
-        <textarea placeholder="Event Details"></textarea>
-        <button type="submit">Submit Booking</button>
-    </form>
-
-    <footer>Back to <a href="index.html">Home</a></footer>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

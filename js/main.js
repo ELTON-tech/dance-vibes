@@ -34,3 +34,13 @@ function updateCountdown() {
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
+
+// Scroll reveal effect (already exists)
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('.fade-slide').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+});

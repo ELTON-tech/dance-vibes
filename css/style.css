@@ -287,9 +287,8 @@ nav a i,
     transform: translateY(0);
 }
 
-/* Countdown Styles */
 .countdown-section {
-    background: url('../assets/class.png') no-repeat center center;
+    background: url('../assets/IMG_0774.JPG') no-repeat center center;
     background-size: cover;
     color: white;
     text-align: center;
@@ -303,7 +302,6 @@ nav a i,
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.6);
-    /* Dark overlay */
     z-index: 1;
 }
 
@@ -382,4 +380,141 @@ nav a i,
 .cta .btn {
     margin: 0 10px;
     margin-top: 1rem;
+}
+
+/* Booking Hero Section */
+.book-hero {
+    background: url('../assets/book-hero.jpg') no-repeat center center;
+    background-size: cover;
+    height: 350px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    color: white;
+    border-radius: 10px;
+}
+
+.hero-overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-overlay p {
+    font-size: 1.1rem;
+}
+
+/* Wrapper layout stays */
+.booking-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+/* LEFT SIDE - Hero */
+.booking-hero-side {
+    flex: 1;
+    background: url('../assets/book.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    min-height: auto;
+}
+
+
+.booking-hero-side h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.booking-hero-side p {
+    font-size: 0.9rem;
+}
+
+/* RIGHT SIDE - Form */
+.booking-form-side {
+    flex: 1;
+    background: #fffaf2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    min-height: auto;
+    box-sizing: border-box;
+}
+
+.booking-form {
+    background: white;
+    padding: 1.5rem 1.2rem;
+    border-radius: 10px;
+    max-width: 460px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+/* Form field adjustments */
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.booking-form textarea {
+    min-height: 70px;
+    resize: vertical;
+}
+
+.book-btn {
+    background: #ff6600;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    background: #e65c00;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+    .booking-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.fade-slide {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.fade-slide.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
