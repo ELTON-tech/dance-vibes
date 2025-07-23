@@ -7,19 +7,42 @@ body {
 }
 
 header,
-footer {
+.footer {
+    background: #222;
+    color: #eee;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
 
-        background: #222;
-        color: #eee;
-        text-align: center;
-        padding: 2rem;
-        font-size: 0.9rem;
-    }
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 1.5rem;
+    text-align: center;
+}
 
-    .footer a {
-        color: #ff9900;
-        text-decoration: none;
-    }
+.footer-logo img {
+    height: 60px;
+}
+
+.footer-center {
+    flex: 1;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    color: #ff6600;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: white;
+}
 
 
 .hero,
@@ -262,6 +285,91 @@ nav a i,
 .feature-card:hover .feature-content {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Countdown Styles */
+.countdown-section {
+    background: url('../assets/class.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.countdown-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /* Dark overlay */
+    z-index: 1;
+}
+
+.countdown-section h2,
+.countdown-section p,
+.countdown-box {
+    position: relative;
+    z-index: 2;
+}
+
+.countdown-box {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.countdown-box span {
+    background: #ff6600;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Booking Timeline Styles */
+.booking-timeline {
+    background: #f9f3e9;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.timeline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.step {
+    width: 200px;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ff6600;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+    margin: 0 auto 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.step:hover .circle {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .cta {
